@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- This file is part newsletter module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<form string="Newsletter Contact" col="6">
+    <label name="email"/>
+    <field name="email"/>
+    <label name="active"/>
+    <field name="active"/>
+    <notebook colspan="6">
+        <page string="Lists" id="lists">
+            <field name="lists"/>
+        </page>
+        <page string="Information" id="information">
+            <label name="name"/>
+            <field name="name"/>
+            <label name="party"/>
+            <field name="party"/>
+        </page>
+    </notebook>
+</form>

@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!-- This file is part newsletter module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Groups -->
+        <record model="res.group" id="group_newsletter">
+            <field name="name">Newsletter</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_newsletter">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_newsletter"/>
+        </record>
+
+        <!-- Icon -->
+        <record model="ir.ui.icon" id="newsletter_icon">
+            <field name="name">tryton-newsletter</field>
+            <field name="path">icons/tryton-newsletter.svg</field>
+        </record>
+
+        <!-- Menu Top -->
+        <menuitem name="Newsletter" id="menu_newsletter" sequence="3" icon="tryton-newsletter"/>
+        <record model="ir.ui.menu-res.group" id="menu_newsletter_group_newsletter">
+            <field name="menu" ref="menu_newsletter"/>
+            <field name="group" ref="group_newsletter"/>
+        </record>
+
+        <!-- newsletter.list -->
+        <record model="ir.ui.view" id="newsletter_list_view_form">
+            <field name="model">newsletter.list</field>
+            <field name="type">form</field>
+            <field name="name">list_form</field>
+        </record>
+        <record model="ir.ui.view" id="newsletter_list_view_tree">
+            <field name="model">newsletter.list</field>
+            <field name="type">tree</field>
+            <field name="name">list_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_newsletter_list_form">
+            <field name="name">Lists</field>
+            <field name="res_model">newsletter.list</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_newsletter_list_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="newsletter_list_view_tree"/>
+            <field name="act_window" ref="act_newsletter_list_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_newsletter_list_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="newsletter_list_view_form"/>
+            <field name="act_window" ref="act_newsletter_list_form"/>
+        </record>
+        <menuitem parent="menu_newsletter" action="act_newsletter_list_form"
+            id="menu_newsletter_list"/>
+
+        <!-- Access -->
+        <record model="ir.model.access" id="access_newsletter_list">
+            <field name="model" search="[('model', '=', 'newsletter.list')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_newsletter_list_manager">
+            <field name="model" search="[('model', '=', 'newsletter.list')]"/>
+            <field name="group" ref="group_newsletter"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <!-- Keyword -->
+        <record model="ir.action.act_window" id="act_newsletter_list_form2">
+            <field name="name">Contacts</field>
+            <field name="res_model">newsletter.contact</field>
+            <field name="domain">[("lists", "in", Eval('active_ids'))]</field>
+        </record>
+        <record model="ir.action.keyword" id="act_open_newsletter_list_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">newsletter.list,-1</field>
+            <field name="action" ref="act_newsletter_list_form2"/>
+        </record>
+
+        <!-- newsletter.contact -->
+        <record model="ir.ui.view" id="newsletter_contact_view_form">
+            <field name="model">newsletter.contact</field>
+            <field name="type">form</field>
+            <field name="name">contact_form</field>
+        </record>
+        <record model="ir.ui.view" id="newsletter_contact_view_tree">
+            <field name="model">newsletter.contact</field>
+            <field name="type">tree</field>
+            <field name="name">contact_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_newsletter_contact_form">
+            <field name="name">Contacts</field>
+            <field name="res_model">newsletter.contact</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_newsletter_contact_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="newsletter_contact_view_tree"/>
+            <field name="act_window" ref="act_newsletter_contact_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_newsletter_contact_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="newsletter_contact_view_form"/>
+            <field name="act_window" ref="act_newsletter_contact_form"/>
+        </record>
+        <menuitem parent="menu_newsletter" action="act_newsletter_contact_form"
+            id="menu_newsletter_contact"/>
+
+        <!-- Access -->
+        <record model="ir.model.access" id="access_newsletter_contact">
+            <field name="model" search="[('model', '=', 'newsletter.contact')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_newsletter_contact_manager">
+            <field name="model" search="[('model', '=', 'newsletter.contact')]"/>
+            <field name="group" ref="group_newsletter"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

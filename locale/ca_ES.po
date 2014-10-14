@@ -1,0 +1,179 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:newsletter.contact:"
+msgid "An email must be unique."
+msgstr "El correu electrònic ha de ser únic."
+
+msgctxt "error:newsletter.contact:"
+msgid "Copy method is dissabled"
+msgstr "El mètode de duplicar està desactivat"
+
+msgctxt "field:newsletter.contact,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "field:newsletter.contact,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:newsletter.contact,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:newsletter.contact,email:"
+msgid "Email"
+msgstr "Email"
+
+msgctxt "field:newsletter.contact,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:newsletter.contact,lists:"
+msgid "Lists"
+msgstr "LListes"
+
+msgctxt "field:newsletter.contact,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:newsletter.contact,party:"
+msgid "Party"
+msgstr "Tercer"
+
+msgctxt "field:newsletter.contact,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:newsletter.contact,write_date:"
+msgid "Write Date"
+msgstr "Usuari creació"
+
+msgctxt "field:newsletter.contact,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:newsletter.contact-newsletter.list,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:newsletter.contact-newsletter.list,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:newsletter.contact-newsletter.list,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:newsletter.contact-newsletter.list,newsletter_contact:"
+msgid "Contact"
+msgstr "Contacta"
+
+msgctxt "field:newsletter.contact-newsletter.list,newsletter_list:"
+msgid "List"
+msgstr "Llista"
+
+msgctxt "field:newsletter.contact-newsletter.list,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:newsletter.contact-newsletter.list,write_date:"
+msgid "Write Date"
+msgstr "Usuari creació"
+
+msgctxt "field:newsletter.contact-newsletter.list,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:newsletter.list,active:"
+msgid "Active"
+msgstr "Actiu"
+
+msgctxt "field:newsletter.list,contacts:"
+msgid "Contacts"
+msgstr "Contactes"
+
+msgctxt "field:newsletter.list,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:newsletter.list,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:newsletter.list,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:newsletter.list,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:newsletter.list,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:newsletter.list,write_date:"
+msgid "Write Date"
+msgstr "Usuari creació"
+
+msgctxt "field:newsletter.list,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "model:ir.action,name:act_newsletter_contact_form"
+msgid "Contacts"
+msgstr "Contactes"
+
+msgctxt "model:ir.action,name:act_newsletter_list_form"
+msgid "Lists"
+msgstr "LListes"
+
+msgctxt "model:ir.action,name:act_newsletter_list_form2"
+msgid "Contacts"
+msgstr "Contactes"
+
+msgctxt "model:ir.ui.menu,name:menu_newsletter"
+msgid "Newsletter"
+msgstr "Butlletí informatiu"
+
+msgctxt "model:ir.ui.menu,name:menu_newsletter_contact"
+msgid "Contacts"
+msgstr "Contactes"
+
+msgctxt "model:ir.ui.menu,name:menu_newsletter_list"
+msgid "Lists"
+msgstr "LListes"
+
+msgctxt "model:newsletter.contact,name:"
+msgid "Newsletter Contact"
+msgstr "Contacta"
+
+msgctxt "model:newsletter.contact-newsletter.list,name:"
+msgid "Newsletter Contact - Newsletter List"
+msgstr "Contact butlletí informatiu - Llista butlletí informatiu"
+
+msgctxt "model:newsletter.list,name:"
+msgid "Newsletter List"
+msgstr "Llista"
+
+msgctxt "model:res.group,name:group_newsletter"
+msgid "Newsletter"
+msgstr "Butlletí informatiu"
+
+msgctxt "view:newsletter.contact:"
+msgid "Information"
+msgstr "Informació"
+
+msgctxt "view:newsletter.contact:"
+msgid "Lists"
+msgstr "LListes"
+
+msgctxt "view:newsletter.contact:"
+msgid "Newsletter Contact"
+msgstr "Contacta"
+
+msgctxt "view:newsletter.list:"
+msgid "Newsletter List"
+msgstr "Llista"
