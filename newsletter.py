@@ -22,6 +22,7 @@ class NewsletterList(ModelSQL, ModelView):
 class NewsletterContact(ModelSQL, ModelView):
     'Newsletter Contact'
     __name__ = 'newsletter.contact'
+    _rec_name = 'email'
     email = fields.Char('Email', required=True)
     name = fields.Char('Name')
     party = fields.Many2One('party.party', 'Party')
