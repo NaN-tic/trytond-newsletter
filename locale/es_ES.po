@@ -148,7 +148,7 @@ msgstr "Listas"
 
 msgctxt "model:newsletter.contact,name:"
 msgid "Newsletter Contact"
-msgstr "Contacto"
+msgstr "Contacto boletín informativo"
 
 msgctxt "model:newsletter.contact-newsletter.list,name:"
 msgid "Newsletter Contact - Newsletter List"
@@ -156,7 +156,7 @@ msgstr "Contacto boletín informativo - lista boletín informativo"
 
 msgctxt "model:newsletter.list,name:"
 msgid "Newsletter List"
-msgstr "Lista"
+msgstr "Lista boletín informativo"
 
 msgctxt "model:res.group,name:group_newsletter"
 msgid "Newsletter"
