@@ -6,6 +6,8 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
     <field name="email"/>
     <label name="active"/>
     <field name="active"/>
+    <label name="lang"/>
+    <field name="lang"/>
     <notebook colspan="6">
         <page string="Lists" id="lists">
             <field name="lists"/>
