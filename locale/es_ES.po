@@ -30,6 +30,10 @@ msgctxt "field:newsletter.contact,id:"
 msgid "ID"
 msgstr "ID"
 
+msgctxt "field:newsletter.contact,lang:"
+msgid "Language"
+msgstr "Idioma"
+
 msgctxt "field:newsletter.contact,lists:"
 msgid "Lists"
 msgstr "Listas"
