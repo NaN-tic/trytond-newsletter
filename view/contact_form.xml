@@ -7,7 +7,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
     <label name="active"/>
     <field name="active"/>
     <label name="lang"/>
-    <field name="lang"/>
+    <field name="lang" widget="selection"/>
     <notebook colspan="6">
         <page string="Lists" id="lists">
             <field name="lists"/>
