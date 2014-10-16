@@ -64,8 +64,40 @@ class NewsletterContact(ModelSQL, ModelView):
             return config.party_lang.id
 
     @classmethod
+    def create(cls, vlist):
+        ContactMechanism = Pool().get('party.contact_mechanism')
+
+        for vals in vlist:
+            if not vals.get('party'):
+                email = vals.get('email')
+                contacts = ContactMechanism.search([
+                    ('value', '=', email),
+                    ('type', '=', 'email'),
+                    ], limit=1)
+                if contacts:
+                    vals['party'] = contacts[0].party.id
+                    vals['name'] = contacts[0].party.name
+
+        return super(NewsletterContact, cls).create(vlist)
+
+    @classmethod
     def copy(cls, contacts, default=None):
         cls.raise_user_error('copy_dissable')
+
+    @fields.depends('email', 'party')
+    def on_change_email(self):
+        ContactMechanism = Pool().get('party.contact_mechanism')
+
+        changes = {}
+        if self.email and not self.party:
+            contacts = ContactMechanism.search([
+                ('value', '=', self.email),
+                ('type', '=', 'email'),
+                ], limit=1)
+            if contacts:
+                changes['party'] = contacts[0].party.id
+                changes['name'] = contacts[0].party.name
+        return changes
 
 
 class NewsletterContactList(ModelSQL):
