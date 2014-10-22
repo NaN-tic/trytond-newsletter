@@ -63,6 +63,11 @@ class NewsletterContact(ModelSQL, ModelView):
         if config.party_lang:
             return config.party_lang.id
 
+    @staticmethod
+    def default_lists():
+        List = Pool().get('newsletter.list')
+        return [l.id for l in List.search([])]
+
     @classmethod
     def create(cls, vlist):
         ContactMechanism = Pool().get('party.contact_mechanism')
