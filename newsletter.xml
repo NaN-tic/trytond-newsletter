@@ -75,7 +75,9 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         <record model="ir.action.act_window" id="act_newsletter_list_form2">
             <field name="name">Contacts</field>
             <field name="res_model">newsletter.contact</field>
-            <field name="domain">[("lists", "in", Eval('active_ids'))]</field>
+            <field name="domain"
+                eval="[('lists', 'in', Eval('active_ids'))]"
+                pyson="1"/>
         </record>
         <record model="ir.action.keyword" id="act_open_newsletter_list_keyword1">
             <field name="keyword">form_relate</field>
