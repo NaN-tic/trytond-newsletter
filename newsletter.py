@@ -93,16 +93,14 @@ class NewsletterContact(ModelSQL, ModelView):
     def on_change_email(self):
         ContactMechanism = Pool().get('party.contact_mechanism')
 
-        changes = {}
         if self.email and not self.party:
             contacts = ContactMechanism.search([
                 ('value', '=', self.email),
                 ('type', '=', 'email'),
                 ], limit=1)
             if contacts:
-                changes['party'] = contacts[0].party.id
-                changes['name'] = contacts[0].party.name
-        return changes
+                self.party = contacts[0].party
+                self.name = contacts[0].party.name
 
 
 class NewsletterContactList(ModelSQL):
