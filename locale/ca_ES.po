@@ -36,7 +36,7 @@ msgstr "Idioma"
 
 msgctxt "field:newsletter.contact,lists:"
 msgid "Lists"
-msgstr "LListes"
+msgstr "Llistes"
 
 msgctxt "field:newsletter.contact,name:"
 msgid "Name"
@@ -72,7 +72,7 @@ msgstr "ID"
 
 msgctxt "field:newsletter.contact-newsletter.list,newsletter_contact:"
 msgid "Contact"
-msgstr "Contacta"
+msgstr "Contacte"
 
 msgctxt "field:newsletter.contact-newsletter.list,newsletter_list:"
 msgid "List"
@@ -132,7 +132,7 @@ msgstr "Contactes"
 
 msgctxt "model:ir.action,name:act_newsletter_list_form"
 msgid "Lists"
-msgstr "LListes"
+msgstr "Llistes"
 
 msgctxt "model:ir.action,name:act_newsletter_list_form2"
 msgid "Contacts"
@@ -148,15 +148,15 @@ msgstr "Contactes"
 
 msgctxt "model:ir.ui.menu,name:menu_newsletter_list"
 msgid "Lists"
-msgstr "LListes"
+msgstr "Llistes"
 
 msgctxt "model:newsletter.contact,name:"
 msgid "Newsletter Contact"
-msgstr "Contacta butlletí informatiu"
+msgstr "Contacte butlletí informatiu"
 
 msgctxt "model:newsletter.contact-newsletter.list,name:"
 msgid "Newsletter Contact - Newsletter List"
-msgstr "Contact butlletí informatiu - Llista butlletí informatiu"
+msgstr "Contacte butlletí informatiu - Llista butlletí informatiu"
 
 msgctxt "model:newsletter.list,name:"
 msgid "Newsletter List"
@@ -172,11 +172,11 @@ msgstr "Informació"
 
 msgctxt "view:newsletter.contact:"
 msgid "Lists"
-msgstr "LListes"
+msgstr "Llistes"
 
 msgctxt "view:newsletter.contact:"
 msgid "Newsletter Contact"
-msgstr "Contacta"
+msgstr "Contacte"
 
 msgctxt "view:newsletter.list:"
 msgid "Newsletter List"
