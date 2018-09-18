@@ -2,11 +2,11 @@
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
 from trytond.pool import Pool
-from .newsletter import *
+from . import newsletter
 
 def register():
     Pool.register(
-        NewsletterList,
-        NewsletterContact,
-        NewsletterContactList,
+        newsletter.NewsletterList,
+        newsletter.NewsletterContact,
+        newsletter.NewsletterContactList,
         module='newsletter', type_='model')
