@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data grouped="1">
+      <record model="ir.message" id="msg_copy_dissable">
+          <field name="text">Copy method is dissabled.</field>
+      </record>
+    </data>
+</tryton>

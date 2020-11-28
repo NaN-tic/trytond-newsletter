@@ -4,6 +4,8 @@
 from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pool import Pool
 from trytond.transaction import Transaction
+from trytond.i18n import gettext
+from trytond.exceptions import UserError
 
 __all__ = ['NewsletterList', 'NewsletterContact', 'NewsletterContactList']
 
@@ -41,9 +43,6 @@ class NewsletterContact(ModelSQL, ModelView):
             ('contact_uniq', Unique(t, t.email),
                 'An email must be unique.'),
             ]
-        cls._error_messages.update({
-            'copy_dissable': 'Copy method is dissabled',
-        })
 
     @staticmethod
     def default_active():
@@ -88,7 +87,7 @@ class NewsletterContact(ModelSQL, ModelView):
 
     @classmethod
     def copy(cls, contacts, default=None):
-        cls.raise_user_error('copy_dissable')
+        raise UserError(gettext('newsletter.msg_copy_dissable'))
 
     @fields.depends('email', 'party')
     def on_change_email(self):
