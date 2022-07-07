@@ -19,7 +19,7 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
         </record>
 
         <!-- Menu Top -->
-        <menuitem name="Newsletter" id="menu_newsletter" sequence="3" icon="tryton-newsletter"/>
+        <menuitem name="Newsletter" id="menu_newsletter" sequence="100" icon="tryton-newsletter"/>
         <record model="ir.ui.menu-res.group" id="menu_newsletter_group_newsletter">
             <field name="menu" ref="menu_newsletter"/>
             <field name="group" ref="group_newsletter"/>
